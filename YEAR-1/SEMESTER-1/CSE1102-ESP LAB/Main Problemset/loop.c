@@ -58,7 +58,7 @@ int main()
 
 int main()
 {
-    int a,b,c,g,s,t; //g= greatest,
+    int a,b,c,max,min,t;
 
     printf("1 for LCM, 2 for GCD\n");
     scanf("%d",&t);
@@ -68,14 +68,14 @@ int main()
 
     if(t==1)
     {
-        if(a>=b && a>=c)
-        g=a;
-        else if(b>=c && b>=a)
-        g=b;
-        else if(c>=a && c>=b)
-        g=c;
+        max=a;
 
-        for(int i=g; 1; i++){
+        if(b>=c && b>=a)
+            max=b;
+        else if(c>=a && c>=b)
+            max=c;
+
+        for(int i=max; 1; i++){
             if(i%a==0 && i%b==0 && i%c==0){
                 printf("LCM is %d",i);
                 break;
@@ -84,14 +84,14 @@ int main()
     }
     else if(t==2)
     {
-        if(a<=b && a<=c)
-            s=a;
-        else if(b<=c && b<=a)
-            s=b;
-        else if(c<=a && c<=b)
-            s=c;
+        min=a;
 
-        for(int i=s; 1 ;i--){
+        if(b<=c && b<=a)
+            min=b;
+        else if(c<=a && c<=b)
+            min=c;
+
+        for(int i=min; 1 ;i--){
             if(a%i==0 && b%i==0 && c%i==0){
                 printf("GCD is %d",i);
                 break;
@@ -105,7 +105,7 @@ int main()
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-//4. Write a program to determine all prime numbers within the range [a … b] where a & b are input through keyboard.
+//4. Write a program to determine all prime numbers within the range [a â€¦ b] where a & b are input through keyboard.
 
 #include<stdio.h>
 
